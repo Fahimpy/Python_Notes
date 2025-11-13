@@ -2,3 +2,18 @@
 
 you need not have to activate environment. 
 just install django, and apps, you are set
+
+add this to domain config
+
+location / {
+    proxy_pass http://127.0.0.1:8001;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+}
+location /static/ {
+    alias /www/wwwroot/prottashaschool.com/static/;
+}
+
+location /media/ {
+    alias /www/wwwroot/prottashaschool.com/media/;
+}
