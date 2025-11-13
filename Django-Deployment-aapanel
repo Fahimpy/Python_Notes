@@ -1,0 +1,4 @@
+/www/wwwroot/prottashaschool.com/80e9fc22001cd7b0808ebebb9aee76d6_venv/bin/pip install appname 
+
+you need not have to activate environment. 
+just install django, and apps, you are set
