@@ -35,6 +35,11 @@ proxy_set_header X-Forwarded-Proto $scheme;
 
 
 and must use: 
+
+# to show nginx configation file
+cat /www/server/panel/vhost/nginx/prottashaschool.com.conf
+
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
