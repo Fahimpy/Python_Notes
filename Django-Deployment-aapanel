@@ -33,3 +33,5 @@ location /media/ {
 #add these lines for csrf token 
 proxy_set_header X-Forwarded-Host $host;
 proxy_set_header X-Forwarded-Proto $scheme;
+
+মূলত এডমিন প্যানেল আসছে উপরের দুই লাইন কোড ও সার্ভার রিসেট এর মাধ্যমে। 
