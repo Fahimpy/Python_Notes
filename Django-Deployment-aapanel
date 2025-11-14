@@ -21,6 +21,10 @@ location /static/ {
     alias /www/wwwroot/prottashaschool.com/static/;
 }
 
+location /staticfiles/ {
+    alias /www/wwwroot/prottashaschool.com/staticfiles/;
+}
+
 location /media/ {
     alias /www/wwwroot/prottashaschool.com/media/;
 }
