@@ -18,7 +18,7 @@ location / {
     proxy_set_header X-Real-IP $remote_addr;
 }
 location /static/ {
-    alias /www/wwwroot/prottashaschool.com/static/;
+    alias /www/wwwroot/prottashaschool.com/staticfiles/;
 }
 
 location /media/ {
@@ -26,7 +26,7 @@ location /media/ {
 }
 
 
-#add these lines for csrf token 
+#add these lines for csrf token in any location {}
 proxy_set_header X-Forwarded-Host $host;
 proxy_set_header X-Forwarded-Proto $scheme;
 
