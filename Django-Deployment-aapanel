@@ -21,10 +21,6 @@ location /static/ {
     alias /www/wwwroot/prottashaschool.com/static/;
 }
 
-location /staticfiles/ {
-    alias /www/wwwroot/prottashaschool.com/staticfiles/;
-}
-
 location /media/ {
     alias /www/wwwroot/prottashaschool.com/media/;
 }
@@ -35,3 +31,10 @@ proxy_set_header X-Forwarded-Host $host;
 proxy_set_header X-Forwarded-Proto $scheme;
 
 মূলত এডমিন প্যানেল আসছে উপরের দুই লাইন কোড ও সার্ভার রিসেট এর মাধ্যমে। 
+
+
+
+and must use: 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
