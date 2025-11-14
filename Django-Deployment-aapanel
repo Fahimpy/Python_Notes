@@ -3,6 +3,13 @@
 you need not have to activate environment. 
 just install django, and apps, you are set
 
+To collect staticfils
+first go to project folder. then
+/www/wwwroot/prottashaschool.com/80e9fc22001cd7b0808ebebb9aee76d6_venv/bin/python3 manage.py collectstatic
+/www/wwwroot/prottashaschool.com/80e9fc22001cd7b0808ebebb9aee76d6_venv/bin/python3 manage.py makemigrations
+/www/wwwroot/prottashaschool.com/80e9fc22001cd7b0808ebebb9aee76d6_venv/bin/python3 manage.py migrate
+
+
 add this to domain config
 
 location / {
@@ -17,3 +24,8 @@ location /static/ {
 location /media/ {
     alias /www/wwwroot/prottashaschool.com/media/;
 }
+
+
+#add these lines for csrf token 
+proxy_set_header X-Forwarded-Host $host;
+proxy_set_header X-Forwarded-Proto $scheme;
